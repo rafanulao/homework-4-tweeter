@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweeter</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <img src="{% static 'images/logo.png' %}" width="50px" />
+      <h1 class="title">Tweeter</h1>
+    </div>
+    <br />
+    <div class="post-field">
+      <div class="composer-row">
+        <div class="profile-pic"></div>
+        <div class="text-field">
+          <textarea placeholder="What's happening?" maxlength="160"></textarea>
+          <div class="post-field-bottom">
+            <p><span class="char-count">160</span> char remaining</p>
+            <button class="tweet-button">Tweet</button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="posts">
+        <div class="post-header">
+          <div class="profile-pic"></div>
+          <div class="profile-info">
+            <h2>Rafael Anulao</h2>
+            <p>@rafael.anulao</p>
+            <p>5hr</p>
+          </div>
+        </div>
+        <div class="post-content">Hey, CSCI 3342 is cool!</div>
+        <div class="actions-bar">
+          <button class="action-button">
+            <img src="{% static 'images/mage--message-round.svg' %}" />
+          </button>
+          <button class="action-button">
+            <img src="{% static 'images/boxicons--repeat-alt-filled.svg' %}" />
+          </button>
+          <button class="action-button">
+            <img src="{% static 'images/iconoir--heart.svg' %}" />
+          </button>
+          <button class="action-button">
+            <img src="{% static 'images/iconoir--share-ios.svg' %}" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div></div>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
